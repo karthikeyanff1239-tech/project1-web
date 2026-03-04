@@ -1,0 +1,375 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+nav .logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+nav a {
+  margin-left: 28px;
+  font-weight: 600;
+  color: #334155;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: #2563eb;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+
+}
+
+/* ================= HERO SECTION ================= */
+.home-page {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 120px 20px 100px;
+  text-align: center;
+  color: white;
+}
+
+.home-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.home-hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+}
+
+.home-hero a {
+  padding: 16px 50px;
+  background: white;
+  color: #2563eb;
+  font-weight: 700;
+  border-radius: 14px;
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+.home-hero a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= PRODUCT LIST ================= */
+.products-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.products-container h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.product-card-body {
+  padding: 22px;
+}
+
+.product-card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.product-card-body p {
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.product-card-body button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.product-card-body button:hover {
+  background: #1e40af;
+}
+
+/* ================= PRODUCT DETAILS ================= */
+.product-details {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.product-details img {
+  width: 450px;
+  border-radius: 18px;
+}
+
+.product-details-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.product-details-info p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.product-details-info button {
+  padding: 14px 36px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-details-info button:hover {
+  background: #1e40af;
+}
+
+/* ================= CART ================= */
+.cart-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item h4 {
+  font-size: 1.1rem;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* ================= CHECKOUT ================= */
+.checkout-container {
+  max-width: 650px;
+  margin: 80px auto;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.checkout-container input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.checkout-container input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.checkout-container button {
+  width: 100%;
+  padding: 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.checkout-container button:hover {
+  background: #1e40af;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .product-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-details img {
+    width: 100%;
+  }
+}
+ /* ================= REGISTER ================= */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.register-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-box h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.register-box button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.register-box button:hover {
+  background-color: #1d4ed8;
+}
+
+.register-box p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.register-box span {
+  color: #2563eb;
+  cursor: pointer;
+}
