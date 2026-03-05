@@ -1,7 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 import sheo from "../assets/sheo.jpg";
+import shoe2 from "../assets/shoe2.jpg";
 import sheo4 from "../assets/sheo4.jpg";
+import sheo3 from "../assets/sheo3.jpg";
+import sheo5 from "../assets/sheo5.jpg";
+import sheo6 from "../assets/sheo6.jpg";
+
+
 export default function ProductDetails() {
   const { id } = useParams();
   const { addToCart } = useCart();
@@ -19,35 +25,35 @@ export default function ProductDetails() {
       name: "Nike Field General Suede",
       price: 7000,
       details: "Comfortable and stylish sneakers",
-      image: "https://via.placeholder.com/400",
+      image: shoe2,
     },
     {
       id: "3",
       name: "Salomon S/LAB Series",
       price: 3000,
       details: "Durable backpack for daily use",
-      image: "https://via.placeholder.com/400",
+      image: sheo3,
     },
     {
       id: "4",
       name: "Nike Court Vision Lo",
       price: 3000,
       details: "Classic design with modern comfort",
-      image: "src/assets/sheo4.jpg",
+      image: sheo4,
     },
     {
       id: "5",
       name: "Nike M2K Tekno",
       price: 3000,
       details: "Chunky sneakers with a retro vibe",
-      image: "src/assets/sheo5.jpg",
+      image: sheo5,
     },
     {
       id: "6",
-      name: "ke Joyride Run Flyknit",
+      name: "Nike Joyride Run Flyknit",
       price: 3000,
       details: "Innovative running shoes with cushioning",
-      image: "src/assets/sheo6.jpg",
+      image: sheo6,
     },
   ];
 

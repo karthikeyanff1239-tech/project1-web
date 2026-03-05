@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
 
-  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <div className="cart-container">
