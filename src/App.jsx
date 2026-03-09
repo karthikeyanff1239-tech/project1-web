@@ -33,17 +33,11 @@ export default function App() {
   };
 
 
-import Register from './pages/Register';
-import "./styles.css";
-
-export default function App() {
-
-  return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-< HEAD
+
         <Route
           path="/products"
           element={<ProductList products={products} addToCart={addToCart} />}
@@ -69,5 +63,6 @@ export default function App() {
 
       </Routes>
     </>
-  );
+  
 }
+
