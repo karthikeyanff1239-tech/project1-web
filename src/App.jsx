@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
@@ -8,6 +9,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
+
 import Register from "./pages/Register";
 import "./styles.css";
 
@@ -30,11 +32,18 @@ export default function App() {
     setCart(cart.filter((item) => item.id !== id));
   };
 
+
+import Register from './pages/Register';
+import "./styles.css";
+
+export default function App() {
+
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+< HEAD
         <Route
           path="/products"
           element={<ProductList products={products} addToCart={addToCart} />}
@@ -50,6 +59,14 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
       </Routes>
     </>
   );

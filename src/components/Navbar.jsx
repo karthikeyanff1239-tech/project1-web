@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 
@@ -20,3 +21,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

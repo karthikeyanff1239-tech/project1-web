@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Carousel from "react-bootstrap/Carousel";
@@ -49,3 +50,18 @@ export default function Home() {
     </>
   );
 }
+=======
+import { Link } from "react-router-dom";
+
+export default function Home() {
+  return (
+    <div className="home-page">
+      <div className="home-hero">
+        <h1>Welcome to Shop</h1>
+        <p>Discover premium products with amazing prices.</p>
+        <Link to="/products">Shop Now</Link>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 2700bd1d67ffd751b4f603515edd6f1593aa821b
