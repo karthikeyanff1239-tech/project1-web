@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Dunk Sb Low",
+      "price": 3200,
+      "image": "/sheo.jpg",
+      "description": "Stylish low-top sneakers with a classic silhouette."
+    },
+    {
+      "id": 2,
+      "name": "Nike Field General Suede",
+      "price": 3700,
+      "image": "/shoe2.jpg",
+      "description": "Premium suede finish with durable grip and comfort."
+    },
+    {
+      "id": 3,
+      "name": "Salomon S/LAB Series",
+      "price": 3300,
+      "image": "/sheo3.jpg",
+      "description": "Trail-ready performance shoes built for adventure."
+    },
+    {
+      "id": 4,
+      "name": "Nike Court Vision Lo",
+      "price": 3300,
+      "image": "/sheo4.jpg",
+      "description": "Retro-inspired low-top sneakers for everyday wear."
+    },
+    {
+      "id": 5,
+      "name": "Nike M2K Tekno",
+      "price": 3300,
+      "image": "/sheo5.jpg",
+      "description": "Chunky silhouette with bold design and comfort."
+    },
+    {
+      "id": 6,
+      "name": "Nike Joyride Run Flyknit",
+      "price": 3300,
+      "image": "/sheo6.jpg",
+      "description": "Innovative cushioning system for smooth running."
+    }
+  ]
+}

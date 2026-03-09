@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 
-export default function ProductList() {
-  const products = [
-    { id: 1, name: "Dunk Sb Low", price: 5000, image: "src/assets/sheo.jpg" },
-    { id: 2, name: "Nike Field General Suede", price: 7000, image: "src/assets/shoe2.jpg" },
-    { id: 3, name: "Salomon S/LAB Series", price: 3000, image: "src/assets/sheo3.jpg" },
-    { id: 4, name: "Nike Court Vision Lo", price: 3000, image: "src/assets/sheo4.jpg" },
-    { id: 5, name: "Nike M2K Tekno", price: 3000, image: "src/assets/sheo5.jpg" },
-    { id: 6, name: "ke Joyride Run Flyknit", price: 3000, image: "src/assets/sheo6.jpg" },
-  ];
+
+export default function ProductList({ products }) {
+  // const products = [
+  //   { id: 1, name: "Dunk Sb Low", price: 5000, image: "src/assets/sheo.jpg" },
+  //   { id: 2, name: "Nike Field General Suede", price: 7000, image: "src/assets/shoe2.jpg" },
+  //   { id: 3, name: "Salomon S/LAB Series", price: 3000, image: "src/assets/sheo3.jpg" },
+  //   { id: 4, name: "Nike Court Vision Lo", price: 3000, image: "src/assets/sheo4.jpg" },
+  //   { id: 5, name: "Nike M2K Tekno", price: 3000, image: "src/assets/sheo5.jpg" },
+  //   { id: 6, name: "ke Joyride Run Flyknit", price: 3000, image: "src/assets/sheo6.jpg" },
+  // ];
 
   return (
     <div className="products-container">
