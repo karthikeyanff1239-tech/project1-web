@@ -37,7 +37,6 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route
           path="/products"
           element={<ProductList products={products} addToCart={addToCart} />}
@@ -48,7 +47,7 @@ export default function App() {
         />
         <Route
           path="/cart"
-          element={<Cart cart={cart}  products={products} removeFromCart={removeFromCart} />}
+          element={<Cart cart={cart} removeFromCart={removeFromCart} />}
         />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
