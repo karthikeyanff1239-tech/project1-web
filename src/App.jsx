@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
@@ -19,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products")
+      .get("http://localhost:5177/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error fetching products:", err));
   }, []);
@@ -31,37 +30,41 @@ export default function App() {
   const removeFromCart = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
+  return(
+  <>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
 
+      <Route
+        path="/products"
+        element={<ProductList products={products} addToCart={addToCart} />}
+      />
+      <Route
+        path="/products/:id"
+        element={<ProductDetails products={products} addToCart={addToCart} />}
+      />
+      <Route
+        path="/cart"
+        element={
+          <Cart
+            cart={cart}
+            products={products}
+            removeFromCart={removeFromCart}
+          />
+        }
+      />
+      {/* <Route path="/checkout" element={<Checkout />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} /> */}
 
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/products"
-          element={<ProductList products={products} addToCart={addToCart} />}
-        />
-        <Route
-          path="/products/:id"
-          element={<ProductDetails products={products} addToCart={addToCart} />}
-        />
-        <Route
-          path="/cart"
-          element={<Cart cart={cart} removeFromCart={removeFromCart} />}
-        />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-
-      </Routes>
-    </>
-  
+      {/* <Route path="/products" element={<ProductList />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
+      <Route path="/cart" element={<Cart />} /> */}
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
+  </>
+  )
 }
-

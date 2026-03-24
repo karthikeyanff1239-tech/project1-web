@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import ditch from "../assets/ditch.jpg";
 import cat from "../assets/cat.jpg";
 import match from "../assets/match.jpg";
@@ -16,8 +14,8 @@ export default function Home() {
           <h1>Welcome to Nikee</h1>
           <p>Discover premium shoes with amazing prices.</p>
           <Link to="/products">Shop Now</Link>
+           <Link to="/products">Go to Products</Link>
 
-          {/* Carousel placed right after Shop Now */}
           <Carousel className="carousel">
             <Carousel.Item>
               <img src={ditch} alt="First slide" className="d-block w-100" />
@@ -50,18 +48,4 @@ export default function Home() {
     </>
   );
 }
-=======
-import { Link } from "react-router-dom";
 
-export default function Home() {
-  return (
-    <div className="home-page">
-      <div className="home-hero">
-        <h1>Welcome to Shop</h1>
-        <p>Discover premium products with amazing prices.</p>
-        <Link to="/products">Shop Now</Link>
-      </div>
-    </div>
-  );
-}
->>>>>>> 2700bd1d67ffd751b4f603515edd6f1593aa821b
